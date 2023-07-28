@@ -1,0 +1,40 @@
+Styles.css
+/* 참고 */
+    .abc{
+        background-color: aqua;
+        border-radius: 30px;
+        padding: 50px;
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1 {
+        font-size: 200px;
+        font-weight: bolder;
+        text-align: center;
+        font-family: 'League Gothic', sans-serif;
+    }
+    .first {
+        font-size: 100px;
+        text-align: center;
+    }
+    .best {
+        font-size: 100px;
+        text-align: left;
+        color: red;
+        margin-top: 50px;
+    }
+    #special {
+        font-size: 100px;
+        text-align: left;
+        color:blue;
+        margin-top: 50px;
+    }
+    a {
+        text-decoration: none;
+        }

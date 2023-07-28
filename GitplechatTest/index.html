@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+  <script>
+    window.GitpleConfig = { appCode: "GHSoKz8cwRM2Z0tZiP43y0PpRF40a3" };
+    !(function () {
+      function e() {
+        function e() {
+          var e = t.contentDocument,
+            a = e.createElement("script");
+          (a.type = "text/javascript"),
+            (a.async = !0),
+            (a.src =
+              window[n] && window[n].url
+                ? window[n].url + "/inapp-web/gitple-loader.js"
+                : "https://app.gitple.io/inapp-web/gitple-loader.js"),
+            (a.charset = "UTF-8"),
+            e.head && e.head.appendChild(a);
+        }
+        var t = document.getElementById(a);
+        t ||
+          (((t = document.createElement("iframe")).id = a),
+          (t.style.display = "none"),
+          (t.style.width = "0"),
+          (t.style.height = "0"),
+          t.addEventListener
+            ? t.addEventListener("load", e, !1)
+            : t.attachEvent
+            ? t.attachEvent("onload", e)
+            : (t.onload = e),
+          document.body.appendChild(t));
+      }
+      var t = window,
+        n = "GitpleConfig",
+        a = "gitple-loader-frame";
+      if (!window.Gitple) {
+        document;
+        var i = function () {
+          i.ex && i.ex(arguments);
+        };
+        (i.q = []),
+          (i.ex = function (e) {
+            i.processApi ? i.processApi.apply(void 0, e) : i.q && i.q.push(e);
+          }),
+          (window.Gitple = i),
+          t.attachEvent
+            ? t.attachEvent("onload", e)
+            : t.addEventListener("load", e, !1);
+      }
+    })();
+    Gitple("boot");
+  </script>
+  <head>
+    <title>처음부터 만드는 리얼 웹사이트</title>
+    <meta charset="utf-8" />
+    <style>
+      h1 {
+        background-color: beige;
+        max-width: 500px;
+        max-height: 50px;
+        overflow: hidden;
+        border: 10px dotted red;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+      }
+      .p1 {
+        overflow: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./real_index.js"></script>
+    <h1 id="principle">인생 대원칙 세가지</h1>
+    <script>
+      document.getElementById("principle").innerHTML = "Side Project";
+    </script>
+    <p class="p1">test1</p>
+    <p class="p2">test2</p>
+    <p class="p3">test3</p>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!-- <script type="text/javascript" src="https://hsitx-app.ga/agentdesktop/libs/servicepattern-sdk-v1.js"></script> -->
+<script type="text/javascript" src="https://sp4.hsitx-ccc.com/agentdesktop/libs/servicepattern-sdk-v1.js"></script>
+<!--<script type="text/javascript" src="https://dev1.hsitx-ccc.com/agentdesktop/libs/servicepattern-sdk-v1.js"></script>-->
+<!-- <script type="text/javascript" src="https://bpdemo1.ncloud.com/agentdesktop/libs/servicepattern-sdk-v1.js"></script>-->
+<!--<iframe id="repeater" style="position:absolute; right: 8px; width: 30%; height: 98%;" src="https://sp3.hsitx-ccc.com/agentdesktop/UniversalRepeater.jsp"></iframe>-->
+<!--<iframe id="repeater" style="position:absolute; right: 8px; width: 30%; height: 98%;" src="https://bpdemo1.ncloud.com/agentdesktop/UniversalRepeater.jsp"></iframe>-->
+ 
+<iframe id="repeater" style="position:absolute; right: 8px; width: 30%; height: 98%;" src="https://sp4.hsitx-ccc.com/agentdesktop/UniversalRepeater.jsp"></iframe>
+
+ <button onclick="bpspat.api.getState(log)">Get State</button>
+ <br>
+ <br> 
+ <button onclick="bpspat.api.setStatus('READY')">Go to Ready</button>
+ <br>
+ <br>
+ <button onclick="bpspat.api.setStatus('NOT_READY','Lunch')">Lunchtime</button>
+ <br>
+ <br>
+ <button onclick="bpspat.api.setStatus('NOT_READY','Break')">Take a Break</button>
+ <br>
+ <br>
+ <button onclick="bpspat.api.setStatus('AFTER_CALL_WORK','')">Take a Busy</button>
+ <br>
+          <input id="number" type="text" placeholder="Dial number"/>
+
+         <button onclick="bpspat.api.dialNumber(document.getElementById('number').value)">Dial</button>
+ <br>
+ 
+ <div id="log">Logs...</div>
+ 
+ <script type="text/javascript">
+
+//window.bpspat.api.init("https://dev1.hsitx-ccc.com");
+//window.bpspat.api.init("https://bpdemo1.ncloud.com");
+//window.bpspat.api.init("https://hsitx-app.ga");
+window.bpspat.api.init("https://sp4.hsitx-ccc.com");
+ function log(data) {
+ let div = document.createElement("div");
+ div.innerHTML = JSON.stringify(data);
+ document.getElementById("log").appendChild(div);
+ }
+
+             window.bpspat.api.addAgentLoginHandler(log);
+             window.bpspat.api.addStatusChangeHandler(log);
+             window.bpspat.api.addInteractionRenderedHandler(log);
+             window.bpspat.api.addInteractionCompletedHandler(log);
+             window.bpspat.api.addInboundCallOfferedHandler(log);
+             window.bpspat.api.addInboundCallAnsweredHandler(log);
+             window.bpspat.api.addOutboundCallDialingHandler(log);
+             window.bpspat.api.addOutboundCallConnectedHandler(log);
+             window.bpspat.api.addCallEndedHandler(log);
+             window.bpspat.api.addCallHeldHandler(log);
+             window.bpspat.api.addCallResumedHandler(log);
+             addConsultTransferHandler:
+             window.bpspat.api.addBlindTransferHandler(log);
+             window.bpspat.api.addConsultTransferHandler(log);
+             window.bpspat.api.addCallRecordingStatusHandler(log);
+             window.bpspat.api.addScreenRecordingStatusHandler(log);
+ </script>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>처음부터 만드는 리얼 웹사이트</title>
+    <meta charset="utf-8">
+    <style>
+      h1 {
+        background-color:beige;
+        max-width: 500px;
+        max-height: 50px;
+        overflow: hidden;
+        border: 10px dotted red;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+      }
+      .p1 {
+        overflow: visible;
+      }
+
+    </style>
+  </head>
+  <body>
+    <script src="./real_index.js"></script>
+    <h1 id="principle">인생 대원칙 세가지</h1>
+    <script>
+      document.getElementById('principle').innerHTML = '인생의 원칙';
+    </script>
+    <p class="p1">관찰자 초점으로 현존한다.</p>
+    <p class="p2">창조적 시각화로 탁월함 그 자체와 정렬된다.</p>
+    <p class="p3">모든 것을 유머의 맥락으로 병치한다.</p>
+  </body>
+</html>
